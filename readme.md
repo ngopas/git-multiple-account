@@ -79,7 +79,7 @@ Get-Service ssh-agent | Set-Service -StartupType Automatic -PassThru | Start-Ser
 
 start-ssh-agent.cmd
 
-ssh-add C:\Users\ASUS\.ssh\id_rsa_ngopas
+ssh-add C:\Users\YOUR_USERNAME\.ssh\id_rsa_ngopas
 ```
 
 open git local config file
