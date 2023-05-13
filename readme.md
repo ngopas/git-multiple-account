@@ -1,3 +1,5 @@
+# git multiple account
+
 <!-- TOC -->
 
 - [git multiple account](#git-multiple-account)
@@ -10,7 +12,7 @@
 
 <!-- /TOC -->
 
-# git multiple account
+
 
 ## 1. Windows
 
