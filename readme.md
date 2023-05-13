@@ -128,6 +128,6 @@ git config user.email ngopas@mail.com
 git init
 git add .
 git commit -m "First commit"
-git remote add origin git@github.com:ngopas/test.git
+git remote add origin git@github.com:ngopas/git-multiple-account.git
 git push origin main
 ```
