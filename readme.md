@@ -1,21 +1,20 @@
+<!-- TOC -->
+
+- [git multiple account](#git-multiple-account)
+	- [1. Windows](#1-windows)
+		- [1.1. Create a new SSH key in your terminal/command line/Powershell](#11-create-a-new-ssh-key-in-your-terminalcommand-linepowershell)
+		- [1.2. Copy public key id\_rsa\_ngopas.pub to GitHub](#12-copy-public-key-id_rsa_ngopaspub-to-github)
+		- [1.3. Add key to ssh agent](#13-add-key-to-ssh-agent)
+		- [1.4. Config git](#14-config-git)
+		- [1.5. commit and push](#15-commit-and-push)
+
+<!-- /TOC -->
+
 # git multiple account
-<!-- vscode-markdown-toc -->
-* 1. [Windows](#Windows)
-	* 1.1. [Create a new SSH key in your terminal/command line/Powershell](#CreateanewSSHkeyinyourterminalcommandlinePowershell)
-	* 1.2. [Copy public key `id_rsa_ngopas.pub` to GitHub](#Copypublickeyid_rsa_ngopas.pubtoGitHub)
-	* 1.3. [Add key to ssh agent](#Addkeytosshagent)
-	* 1.4. [Config git](#Configgit)
-	* 1.5. [commit and push](#commitandpush)
 
-<!-- vscode-markdown-toc-config
-	numbering=true
-	autoSave=true
-	/vscode-markdown-toc-config -->
-<!-- /vscode-markdown-toc -->
+## 1. Windows
 
-##  1. <a name='Windows'></a>Windows
-
-###  1.1. <a name='CreateanewSSHkeyinyourterminalcommandlinePowershell'></a>Create a new SSH key in your terminal/command line/Powershell
+### 1.1. Create a new SSH key in your terminal/command line/Powershell
 
 ```sh
 ssh-keygen -t rsa -C “your-email-address@mail.com”
@@ -50,7 +49,7 @@ As you can see we have both `id_rsa_ngopas` and `id_rsa_ngopas.pub`
 
 `id_rsa_ngopas.pub` is the public key which we will provide GitHub with.
 
-###  1.2. <a name='Copypublickeyid_rsa_ngopas.pubtoGitHub'></a>Copy public key `id_rsa_ngopas.pub` to GitHub
+### 1.2. Copy public key id_rsa_ngopas.pub to GitHub
 
 open file `id_rsa_ngopas.pub` with your editor
 
@@ -83,7 +82,7 @@ n8jMUcNjIFqgQngidS8pQedp8= your-email-address@mail.com
 
 ![add new key](./images/ssh-keys-add-new.png)
 
-###  1.3. <a name='Addkeytosshagent'></a>Add key to ssh agent
+### 1.3. Add key to ssh agent
 
 ```sh
 Get-Service ssh-agent | Set-Service -StartupType Automatic -PassThru | Start-Service
@@ -93,7 +92,7 @@ start-ssh-agent.cmd
 ssh-add C:\Users\YOUR_USERNAME\.ssh\id_rsa_ngopas
 ```
 
-###  1.4. <a name='Configgit'></a>Config git
+### 1.4. Config git
 
 open git local config file
 
@@ -136,7 +135,7 @@ git config user.name "ngopas"
 git config user.email ngopas@mail.com
 ```
 
-###  1.5. <a name='commitandpush'></a>commit and push 
+### 1.5. commit and push 
 ```
 git init
 git add .
